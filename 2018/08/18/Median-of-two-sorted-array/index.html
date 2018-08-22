@@ -13,6 +13,10 @@
     
 
     
+        <meta name="description" content="刚看到这题，直觉是先merge两个sorted array再二分法找中位数，O(n)再O(log n),如此简单。偏偏存在一个O(log (m+n))的方法，让难度系数蹭的冲上去了。。
+
+官方解法这是我试过的最正确的解法。思路：1)  假设k是两个array合并后的中位数（奇偶暂时不表），寻找两个a"/>
+    
 
     <!--Author-->
     
@@ -21,10 +25,14 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Max&#39;s blogs"/>
+        <meta property="og:title" content="Median of two sorted array"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="刚看到这题，直觉是先merge两个sorted array再二分法找中位数，O(n)再O(log n),如此简单。偏偏存在一个O(log (m+n))的方法，让难度系数蹭的冲上去了。。
+
+官方解法这是我试过的最正确的解法。思路：1)  假设k是两个array合并后的中位数（奇偶暂时不表），寻找两个a"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +40,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +59,7 @@
 
     <!-- Title -->
     
-    <title>Max&#39;s blogs</title>
+    <title>Median of two sorted array - Max&#39;s blogs</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -162,187 +170,79 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Max's blogs</h1>
-                    <span class="subheading"></span>
+                <div class="post-heading">
+                    <h1>Median of two sorted array</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2018-08-18
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2018/08/18/Median-of-two-sorted-array/">
-        <h2 class="post-title">
-            Median of two sorted array
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-08-18
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/07/09/Lifecycles-of-React/">
-        <h2 class="post-title">
-            Lifecycles of React
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-07-09
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/07/07/Markdown-learning-notes/">
-        <h2 class="post-title">
-            Markdown learning notes
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-07-07
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/05/12/React-learning-notes/">
-        <h2 class="post-title">
-            React learning notes
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-05-12
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/04/24/Daily-notes/">
-        <h2 class="post-title">
-            Daily notes
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-04-24
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/04/05/Git-learning-notes/">
-        <h2 class="post-title">
-            Git learning notes
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-04-05
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/04/03/router-link小记/">
-        <h2 class="post-title">
-            router-link小记
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-04-03
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/04/03/徒步装备清单/">
-        <h2 class="post-title">
-            徒步装备清单
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-04-03
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/04/02/徒步默拉皮/">
-        <h2 class="post-title">
-            徒步默拉皮
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-04-02
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2018/03/29/Ladder-on-Lintcode/">
-        <h2 class="post-title">
-            Ladder on Lintcode
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2018-03-29
-    </p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Alogrithm/">#Alogrithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
 
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>刚看到这题，直觉是先merge两个sorted array再二分法找中位数，O(n)再O(log n),如此简单。偏偏存在一个O(log (m+n))的方法，让难度系数蹭的冲上去了。。</p>
+<ol>
+<li><p><a href="https://www.jiuzhang.com/solution/median-of-two-sorted-arrays/#tag-highlight-lang-cpp" target="_blank" rel="noopener">官方解法</a><br>这是我试过的最正确的解法。<br>思路：<br>1)  假设k是两个array合并后的中位数（奇偶暂时不表），寻找两个array的第k/2个元素比较大小（边界情况暂时不表），若A[k/2-1] &lt; B[k/2-1], 则只需考虑A的[k/2-1]后的元素了。利用recursion，A的index, k，跟着迭代。<br>2)  findKth(A, B, Aindex, Bindex, k)里面的Aindex, Bindex还没有算入下k个element之中。因此首先的判断是Ai &gt;= A.size()而不是A.size() - 1。<br>3） int Adata = Ai + k/2 - 1 &gt; A.size() - 1 ? 判断的是第k/2个元素的index是否大于last element index in A, 如果Adata &lt; Bdata, then findKth(A, B, Ai+k/2, Bi, k-k/2)中Ai+k/2还没有算入下k个element之中。这里有点绕，花了我很久。</p>
+</li>
+<li><p><a href="https://wdxtub.com/interview/14520606002549.html" target="_blank" rel="noopener">好的思路</a><br>思路不错，但是有边界条件没有考虑到，并且这个代码有错误。<br>思路：<br>利用recursion，条件是array的size。没考虑到的边界情况有：<br>1）A, B各只有一个元素的情况下报错<br>2）有一个array为空的情况报错<br>3）需要写一个function用来remove 前pa个元素</p>
+</li>
+</ol>
+<p>未完。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
